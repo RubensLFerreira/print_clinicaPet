@@ -40,7 +40,7 @@ export default {
       });
 
       if (!funcionario) {
-        res.status(404).json({ message: "funcionário não encontrado!" });
+        res.status(404).json({ message: "Funcionário não encontrado!" });
       }
 
       await prisma.funcionario.update({
@@ -67,7 +67,7 @@ export default {
       });
 
       if (!funcionario) {
-        res.status(404).json("Este funcionário não existe!");
+        res.status(404).json("Funcionário não encontrado!");
       }
 
       await prisma.funcionario.delete({
@@ -76,7 +76,7 @@ export default {
 
       return res
         .status(200)
-        .json({ message: "Cadastro deletado com sucesso!" });
+        .json({ message: "Cadastro funcionário deletado com sucesso!" });
     } catch (error) {
       return res.status(400).json({ message: error.message });
     }
