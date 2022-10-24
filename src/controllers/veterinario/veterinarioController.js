@@ -41,7 +41,7 @@ export default {
       });
 
       if (!veterinario) {
-        res.status(404).json({ message: "Este usuário não foi encontrado!" });
+        res.status(404).json({ message: "Médico veterinário não foi encontrado!" });
       }
 
       await prisma.veterinario.update({
@@ -72,7 +72,7 @@ export default {
       });
 
       if (!veterinario) {
-        res.status(404).json("Este funcionário não existe!");
+        res.status(404).json("Médico veterinário não foi encontrado!");
       }
 
       await prisma.veterinario.delete({
