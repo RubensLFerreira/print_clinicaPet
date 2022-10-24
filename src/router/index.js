@@ -25,4 +25,10 @@ router.post("/veterinario", veterinarioController.createVeterinario);
 router.put("/veterinario/:id", veterinarioController.updateVeterinario);
 router.delete("/veterinario/:id", veterinarioController.deleteVeterinario);
 
+// funcionario
+router.get("/funcionarios", funcionarioController.findAllFuncionario);
+router.post("/funcionario", funcionarioController.createFuncionario);
+router.put("/funcionario/:id", funcionarioController.updateFuncionario);
+router.delete("/funcionario/:id", funcionarioController.deleteFuncionario);
+
 export { router };
