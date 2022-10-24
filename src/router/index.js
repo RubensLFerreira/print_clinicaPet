@@ -4,6 +4,7 @@ import clienteController from "../controllers/cliente/clienteController";
 import vacinaController from "../controllers/vacina/vacinaController";
 import veterinarioController from "../controllers/veterinario/veterinarioController";
 import funcionarioController from "../controllers/funcionario/funcionarioController";
+import agendamentoController from "../controllers/agendamento/agendamentoController";
 
 const router = Router();
 
@@ -30,5 +31,12 @@ router.get("/funcionarios", funcionarioController.findAllFuncionario);
 router.post("/funcionario", funcionarioController.createFuncionario);
 router.put("/funcionario/:id", funcionarioController.updateFuncionario);
 router.delete("/funcionario/:id", funcionarioController.deleteFuncionario);
+
+// agendamento
+router.get("/agendamentos", agendamentoController.findAllAgendamento);
+router.post(
+  "/agendamento/cliente/:id_cliente/funcionario/:id_funcionario",
+  agendamentoController.createAgendamento
+);
 
 export { router };
