@@ -38,5 +38,7 @@ router.post(
   "/agendamento/cliente/:id_cliente/funcionario/:id_funcionario",
   agendamentoController.createAgendamento
 );
+router.put("/agendamento/:id", agendamentoController.updateAgendamento);
+router.delete("/agendamento/:id", agendamentoController.deleteAgendamento);
 
 export { router };
