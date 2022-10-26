@@ -5,6 +5,7 @@ import vacinaController from "../controllers/vacina/vacinaController";
 import veterinarioController from "../controllers/veterinario/veterinarioController";
 import funcionarioController from "../controllers/funcionario/funcionarioController";
 import agendamentoController from "../controllers/agendamento/agendamentoController";
+import animalController from "../controllers/animal/animalController";
 
 const router = Router();
 
@@ -40,5 +41,11 @@ router.post(
 );
 router.put("/agendamento/:id", agendamentoController.updateAgendamento);
 router.delete("/agendamento/:id", agendamentoController.deleteAgendamento);
+
+// animal
+router.get("/animais", animalController.findAllAnimal);
+router.post("/animal/:id_cliente", animalController.createAnimal);
+router.put("/animal/:id", animalController.updateAnimal);
+router.delete("/animal/:id", animalController.deleteAnimal);
 
 export { router };
